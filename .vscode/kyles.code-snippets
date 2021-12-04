@@ -1,0 +1,26 @@
+{
+    "Insert Current DateTime": {
+    "scope": "markdown, md, txt, text",
+    "prefix": "dateTime",
+    "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE T $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+    "description": "inserts a current date/time stamp"
+},
+"Insert Current Date": {
+    "scope": "markdown, md, txt, text",
+    "prefix": "dateOnly",
+    "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+    "description": "inserts a current date stamp"
+},
+"Insert Current Time": {
+    "scope": "markdown, md, txt, text",
+    "prefix": "timeOnly",
+    "body": "$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+    "description": "inserts a current date stamp"
+},
+"Kyle's Todo": {
+    "scope": "markdown, md, txt, text",
+    "prefix": "ktodo",
+    "body": "[${7:x}] (${1:RANK}) ${2:CompletedAt} ${3:$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE} ${4:description} +${5:project} @${6:context}\n$0",
+    "description": "A template Todo item following the advice of [Todo.txt](https://github.com/todotxt/todo.txt)"
+}
+}
