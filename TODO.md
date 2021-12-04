@@ -1,10 +1,7 @@
 
 
 # Backlog
-[] (RANK) CompletedAt 2021-12-04 description +project @context
-
-
-- [] (A) CompletedAt 2021-12-04 sfx for car forward mechanic
+- [] (RANK) CompletedAt 2021-12-04 description +project @context
 
 - [] (A) CompletedAt 2021-12-04 sfx for car colide with box mechanic
 
@@ -34,3 +31,4 @@ vehicle
 
 # DONE
 - [x] (A) A sound track for the gameplay.
+- [x] (A) 2021-12-04 T 15:36:33 2021-12-04 sfx for car forward mechanic

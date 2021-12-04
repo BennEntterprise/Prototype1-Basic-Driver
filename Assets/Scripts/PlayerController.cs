@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public float speed = 20.0f;
-    private float turnSpeed = 25.0f;
-    private float horizontalInput;
-    private float forwardInput;
-
+    private float speed = 30.0f;
+    private float turnSpeed = 50.0f;
+    public float horizontalInput;
+    public float forwardInput;
+    private AudioSource playerAudio;
+    public AudioClip engineNoise;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudio = GetComponent<AudioSource>();
+        playerAudio.volume = 0.1f;
+
     }
 
     // Update is called once per frame
@@ -22,6 +24,16 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
+
+        // Handle the Engine Noise if Driving Forward
+        if(forwardInput > 0){
+            playerAudio.PlayOneShot(engineNoise);
+        }
+        if (forwardInput == 0 )
+        {
+            playerAudio.Stop();
+        }
+
 
         // Move Forward based on vertical input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
