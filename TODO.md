@@ -3,7 +3,6 @@
 # Backlog
 [] (RANK) CompletedAt 2021-12-04 description +project @context
 
-- [] (A) A sound track for the gameplay.
 
 - [] (A) CompletedAt 2021-12-04 sfx for car forward mechanic
 
@@ -34,3 +33,4 @@ vehicle
 
 
 # DONE
+- [x] (A) A sound track for the gameplay.
