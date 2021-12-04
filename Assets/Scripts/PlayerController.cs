@@ -26,19 +26,21 @@ public class PlayerController : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
 
         // Handle the Engine Noise if Driving Forward
-        if(forwardInput > 0){
+        if (forwardInput > 0)
+        {
             playerAudio.PlayOneShot(engineNoise);
         }
-        if (forwardInput == 0 )
+        if (forwardInput == 0)
         {
             playerAudio.Stop();
         }
 
-
         // Move Forward based on vertical input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        
+
         // Steer left/right based on horizontal input.
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
+
+
 }
